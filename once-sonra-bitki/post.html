@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>Önce Sonra Postu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #141414; --muted: #9a9a9a; --white: #ffffff; --font: "Inter", "Helvetica Neue", Arial, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; }
+  body { font-family: var(--font); background: var(--ink); -webkit-font-smoothing: antialiased; }
+  .post { position: relative; width: 1080px; height: 1350px; overflow: hidden; }
+  .half { position: absolute; top: 0; width: 540px; height: 1080px; overflow: hidden; }
+  .half img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .before { left: 0; }
+  .before img { object-position: 38% 50%; }
+  .after { right: 0; }
+  .after img { object-position: 41% 50%; }
+  .divider { position: absolute; left: 539px; top: 0; width: 2px; height: 1080px; background: var(--white); }
+  .label {
+    position: absolute; top: 40px; padding: 10px 18px; border-radius: 999px;
+    font-weight: 600; font-size: 20px; letter-spacing: .18em; text-transform: uppercase;
+    background: rgba(20,20,20,.72); color: var(--white); backdrop-filter: blur(6px);
+  }
+  .before .label { left: 36px; }
+  .after .label { right: 36px; background: var(--white); color: var(--ink); }
+  .band { position: absolute; left: 0; right: 0; bottom: 0; height: 270px; background: var(--ink); color: var(--white); padding: 0 64px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+  .band p { font-size: 46px; line-height: 1.15; letter-spacing: -.02em; }
+  .band .from { color: var(--muted); font-weight: 500; }
+  .band .from span { color: var(--white); margin-left: 10px; }
+  .band .to { font-weight: 700; }
+</style></head>
+<body><div class="post">
+  <div class="half before"><img src="once.jpg" alt=""><span class="label">Önce</span></div>
+  <div class="half after"><img src="sonra.jpg" alt=""><span class="label">Sonra</span></div>
+  <div class="divider"></div>
+  <div class="band">
+    <p class="from">Telefonla çekilen ürün<span>→</span></p>
+    <p class="to">Stüdyo kalitesinde görsel</p>
+  </div>
+</div></body></html>

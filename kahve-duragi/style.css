@@ -319,3 +319,5 @@ address { font-style: normal; font-size: 1.1rem; margin-bottom: 14px; }
 @media (min-width: 1100px) {
   .reviews { grid-template-columns: repeat(4, 1fr); }
 }
+
+.concept-note { font-size: .75rem; opacity: .6; margin-top: 10px !important; }

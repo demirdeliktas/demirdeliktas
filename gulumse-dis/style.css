@@ -346,3 +346,5 @@ address { font-style: normal; font-size: 1.08rem; color: var(--ink); font-weight
   .whatsapp-label { display: inline; }
   .site-footer { padding-bottom: 32px; }
 }
+
+.concept-note { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 10px !important; }

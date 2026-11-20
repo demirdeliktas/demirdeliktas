@@ -167,12 +167,12 @@ button { font: inherit; color: inherit; }
 .featured { padding: 0 0 72px; }
 .feat-card { display: grid; text-decoration: none; border: 1px solid var(--accent); border-radius: var(--radius); overflow: hidden; background: #000; transition: transform .25s, box-shadow .25s; }
 .feat-card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px -24px rgba(217,240,90,.35); }
-.feat-logo { display: grid; place-items: center; padding: 20px 12px 0; background: #000; }
-.feat-logo img { width: 100%; max-width: 440px; height: auto; }
-.feat-body { padding: 22px 22px 26px; background: var(--bg-2); display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-.feat-chip { background: var(--accent); color: var(--accent-ink); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
-.feat-body h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 800; }
-.feat-body p { margin: 0; color: #cfcfcf; }
+.feat-logo { display: grid; place-items: center; padding: 18px 24px 6px; background: #000; }
+.feat-logo img { width: 100%; max-width: 260px; height: auto; }
+.feat-body { padding: 18px 20px 22px; background: var(--bg-2); display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.feat-chip { background: var(--accent); color: var(--accent-ink); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+.feat-body h2 { font-size: clamp(1.2rem, 4.6vw, 1.6rem); font-weight: 700; letter-spacing: -0.02em; }
+.feat-body p { margin: 0; color: #cfcfcf; font-size: .95rem; }
 .feat-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 600; margin-top: 4px; }
 .feat-link svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -216,5 +216,6 @@ button { font: inherit; color: inherit; }
   .ba-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .feat-card { grid-template-columns: 1.1fr 1fr; align-items: stretch; }
   .feat-logo { padding: 24px; }
-  .feat-body { justify-content: center; padding: 40px; }
+  .feat-logo img { max-width: 340px; }
+  .feat-body { justify-content: center; padding: 32px 36px; }
 }

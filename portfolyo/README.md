@@ -8,7 +8,8 @@ portfolyo/
 ├── img/web/      kahve.jpg, gulumse.jpg (site ekran görüntüleri)
 ├── img/kuafor/   6 Instagram postu (+ kucuk/ galeri önizlemeleri)
 ├── img/emlak/    1 post + 2 story (+ kucuk/)
-├── img/urun/     once.jpg, sonra.jpg (önce/sonra slider)
+├── img/urun/     bitki-once.jpg, bitki-sonra.jpg (önce/sonra slider)
+├── img/siadialiga-logo.jpg (öne çıkan gerçek proje kartı)
 └── video/        kahve-reels.mp4 (+ .webm yedek, poster)
 ```
 

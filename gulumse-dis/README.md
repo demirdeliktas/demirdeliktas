@@ -5,7 +5,7 @@ Saf HTML/CSS/JS — derleme adımı yok, dış görsel kullanılmaz (tüm ikon v
 
 ## Bölümler
 Hero + Randevu Al · Tedaviler (implant, ortodonti, beyazlatma, kanal) · Hekimler · Neden Biz ·
-Hasta Yorumları · Randevu formu (WhatsApp'a mesaj hazırlar) · SSS · Konum + Google Harita · WhatsApp butonu
+Randevu formu (WhatsApp'a mesaj hazırlar) · SSS · Konum + Google Harita · WhatsApp butonu
 
 ## Netlify
 Klasörü https://app.netlify.com/drop adresine sürükleyin ya da Git ile bağlayıp
@@ -17,5 +17,5 @@ Klasörü https://app.netlify.com/drop adresine sürükleyin ya da Git ile bağl
 - Harita sorgusu (`maps?q=...`) ve çalışma saatleri (`index.html` tablo + `script.js` `HOURS`)
 - Hekim adları ve özgeçmişleri hayalidir.
 
-**Not:** Türkiye'de sağlık kuruluşlarının tanıtımı mevzuatla sınırlıdır (ör. hasta yorumları,
-"en iyi" gibi ifadeler). Gerçek bir klinik için yayından önce içeriği bu açıdan kontrol ettirin.
+**Not:** Sağlık tanıtım mevzuatı gereği hasta yorumu ve hasta memnuniyeti puanı kullanılmamıştır.
+Gerçek bir klinik için yayından önce içeriği yine de bir uzmana kontrol ettirin.

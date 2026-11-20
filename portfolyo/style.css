@@ -150,9 +150,15 @@ button { font: inherit; color: inherit; }
 .svc h3 { font-size: 1.2rem; margin-bottom: 8px; }
 .svc p { margin: 0; color: var(--muted); font-size: .95rem; }
 
+/* Konsept etiketi */
+.concept { display: inline-block; margin: 10px 0 0; padding: 3px 8px; border-radius: 4px; background: var(--bg-3); color: var(--muted); font-size: .7rem; font-weight: 500; letter-spacing: .04em; }
+.media-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+
 /* CTA + footer */
 .cta { padding: 88px 0; border-top: 1px solid var(--line); text-align: center; }
-.cta h2 { font-size: clamp(2rem, 8vw, 3.6rem); font-weight: 800; }
+.cta h2 { font-size: clamp(1.8rem, 6.5vw, 3rem); font-weight: 800; max-width: 22ch; margin: 0 auto; }
+.cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.cta-row .btn { flex: 1 1 220px; max-width: 280px; }
 .cta p { color: var(--muted); margin: 12px 0 28px; }
 .foot { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: .85rem; color: #cfcfcf; }
 .foot p { margin: 4px 0; }
@@ -183,6 +189,5 @@ button { font: inherit; color: inherit; }
   .g-mixed { grid-template-columns: 1.25fr 1fr 1fr; }
   .split { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   .split .head { margin-bottom: 0; }
-  .ba, .phone { justify-self: center; }
   .services { grid-template-columns: repeat(4, 1fr); }
 }

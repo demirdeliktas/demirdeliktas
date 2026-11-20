@@ -13,9 +13,7 @@ portfolyo/
 ```
 
 ## Yayından önce değiştirin
-- `90XXXXXXXXXX` → gerçek WhatsApp numarası (`index.html` içinde 3 yer)
 - `portfolyo.` logosu → kendi adınız / markanız
-- `instagram.com/kullaniciadi` → gerçek Instagram hesabı
 
 ## Netlify
 `portfolyo` klasörünü app.netlify.com/drop'a sürükleyin ya da Git bağlantısında *Base directory* = `portfolyo`.

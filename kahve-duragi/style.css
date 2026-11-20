@@ -301,7 +301,7 @@ address { font-style: normal; font-size: 1.1rem; margin-bottom: 14px; }
   .site-nav a:not(.btn):hover::after { transform: scaleX(1); }
   .site-nav .btn { margin-top: 0; }
 
-  .hero { align-items: center; }
+  .hero { align-items: flex-end; }
   .hero-content { padding-bottom: 80px; }
   .hero-actions .btn { flex: 0 0 auto; }
   .hero-badges { max-width: 560px; font-size: .85rem; }

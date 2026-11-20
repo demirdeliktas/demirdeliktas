@@ -49,14 +49,11 @@ button { font: inherit; color: inherit; }
 .top.scrolled { border-color: var(--line); }
 .top-in { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .logo {
-  display: inline-block; padding: 4px 6px 2px 0; text-decoration: none; white-space: nowrap;
-  font-family: "Mea Culpa", "Segoe Script", cursive; font-weight: 400; font-size: 2.3rem; line-height: 1; letter-spacing: .01em;
-  background: linear-gradient(170deg, #ffffff 0%, #e4eefa 28%, #7f9cc4 50%, #f2f7fd 60%, #9fb8d9 82%, #ffffff 100%);
+  display: inline-block; padding: 2px 4px 2px 0; text-decoration: none; white-space: nowrap;
+  font-family: "Birthstone Bounce", "Segoe Script", cursive; font-weight: 500; font-size: 2rem; line-height: 1; letter-spacing: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #eef2f7 55%, #b9c6d8 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 0 8px rgba(110, 160, 230, .45));
-  transform: rotate(-3deg); transition: filter .3s;
 }
-.logo:hover { filter: drop-shadow(0 0 12px rgba(110, 160, 230, .75)); }
 .nav { display: none; }
 
 /* Hero */
@@ -198,7 +195,7 @@ button { font: inherit; color: inherit; }
   .nav { display: flex; gap: 28px; }
   .nav a { text-decoration: none; color: var(--muted); font-size: .92rem; font-weight: 500; transition: color .2s; }
   .nav a:hover { color: var(--fg); }
-  .logo { font-size: 2.6rem; }
+  .logo { font-size: 2.3rem; }
   .hero { padding: 110px 0 120px; }
   .hero-cta .btn { flex: 0 0 auto; }
   .facts { max-width: 640px; }

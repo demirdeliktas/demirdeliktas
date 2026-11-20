@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>05 Gelin Başı Paketi</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .post { background: var(--plum); color: var(--white); }
+  .photo { object-position: 50% 100%; filter: saturate(.9) brightness(1.08); }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,18,31,.55) 0%, rgba(38,18,31,0) 20%, rgba(38,18,31,0) 44%, rgba(38,18,31,.9) 64%, var(--plum) 100%); }
+  .top { position: absolute; top: 56px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; }
+  .copy { position: absolute; left: 64px; right: 64px; top: 640px; }
+  h2 { font-size: 120px; }
+  h2 .it { display: block; font-size: 150px; color: var(--blush); margin-top: -4px; }
+  .list { list-style: none; margin-top: 34px; display: grid; gap: 14px; }
+  .list li { display: flex; align-items: center; gap: 18px; font-size: 29px; font-weight: 600; }
+  .list li::before { content: ""; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 12 4 4 8-8' fill='none' stroke='%2326121f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat; }
+  .price { position: absolute; right: 64px; top: 676px; text-align: right; }
+  .price small { display: block; font-size: 20px; letter-spacing: .16em; text-transform: uppercase; opacity: .75; font-weight: 700; }
+  .price b { font-family: var(--display); font-weight: 800; font-size: 70px; letter-spacing: -.04em; color: var(--lime); }
+  .foot { color: var(--white); }
+</style></head>
+<body><div class="post">
+  <img class="photo" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=1400&q=85" alt="">
+  <div class="shade"></div>
+  <div class="top">
+    <div class="brand"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="12" cy="37" r="7"/><circle cx="36" cy="37" r="7"/><path d="M16 31 37 5M32 31 11 5"/></svg><div>makas<small>Kuaför · Kızılay</small></div></div>
+    <span class="chip chip-lime">2027 sezonu</span>
+  </div>
+  <div class="copy">
+    <h2 class="display">Gelin başı<span class="it">paketi</span></h2>
+    <ul class="list">
+      <li>Düğünden önce prova seansı</li>
+      <li>Düğün günü gelin başı ve duvak uygulaması</li>
+      <li>Gelinliğe uygun saç aksesuarı seçimi</li>
+      <li>Annenize ya da nedimenize fön hediye</li>
+    </ul>
+  </div>
+  <div class="price"><small>Paket fiyatı</small><b>6.500₺</b><small>'den başlayan</small></div>
+  <div class="foot"><span class="handle">@makaskuafor.kizilay</span><span class="handle">Tarihinizi şimdiden ayırtın</span></div>
+</div></body></html>

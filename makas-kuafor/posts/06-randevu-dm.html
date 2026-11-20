@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>06 Randevu için DM</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .post { background: var(--lime); padding: 64px; }
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  h2 { margin-top: 70px; font-size: 168px; }
+  h2 .it { font-size: 200px; }
+  h2 .dm { display: inline-block; background: var(--plum); color: var(--lime); padding: 0 30px 14px; border-radius: 40px; transform: rotate(-4deg); margin-left: 6px; }
+  .circle { position: absolute; right: -90px; top: 560px; width: 520px; height: 520px; border-radius: 50%; overflow: hidden; border: 14px solid var(--plum); }
+  .circle img { width: 100%; height: 100%; object-fit: cover; }
+  .chat { position: absolute; left: 64px; top: 640px; width: 560px; display: grid; gap: 16px; }
+  .bubble { padding: 22px 28px; border-radius: 30px; font-size: 27px; font-weight: 600; line-height: 1.35; max-width: 470px; box-shadow: 0 14px 30px -18px rgba(38,18,31,.55); }
+  .in { background: var(--white); color: var(--plum); border-bottom-left-radius: 8px; }
+  .out { background: var(--plum); color: var(--white); border-bottom-right-radius: 8px; justify-self: end; }
+  .who { font-size: 17px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; opacity: .55; margin-bottom: -6px; }
+  .who.r { justify-self: end; }
+  .foot { align-items: flex-end; }
+  .send { display: flex; align-items: center; gap: 14px; font-family: var(--display); font-weight: 800; font-size: 34px; letter-spacing: -.02em; }
+  .send svg { width: 46px; height: 46px; }
+</style></head>
+<body><div class="post">
+  <div class="top">
+    <div class="brand"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="12" cy="37" r="7"/><circle cx="36" cy="37" r="7"/><path d="M16 31 37 5M32 31 11 5"/></svg><div>makas<small>Kuaför · Kızılay</small></div></div>
+    <span class="chip chip-plum">Hızlı randevu</span>
+  </div>
+  <h2 class="display">Randevu <span class="it">için</span><br><span class="dm">DM</span></h2>
+
+  <div class="circle"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=85" alt=""></div>
+
+  <div class="chat">
+    <span class="who">Sen</span>
+    <div class="bubble in">Merhaba, cumartesi 14:00'te kesim ve fön için yer var mı?</div>
+    <span class="who r">Makas</span>
+    <div class="bubble out">Var! Adını ve telefonunu yaz, randevunu hemen oluşturalım.</div>
+  </div>
+
+  <div class="foot">
+    <span class="send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>@makaskuafor.kizilay</span>
+    <span class="handle">Kızılay, Ankara</span>
+  </div>
+</div></body></html>

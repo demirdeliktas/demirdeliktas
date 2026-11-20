@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><meta name="size" content="1080x1920"><title>Story Yeni İlan</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { width: 1080px; height: 1920px; background: var(--navy); }
+  .frame { width: 1080px; height: 1920px; color: var(--white); }
+  .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,30,51,.85) 0%, rgba(10,30,51,.45) 20%, rgba(10,30,51,.1) 32%, rgba(10,30,51,.05) 40%, rgba(10,30,51,.55) 62%, rgba(10,30,51,.95) 82%, var(--navy-ink) 100%); }
+  /* Güvenli alan: 250px – 1670px */
+  .top { position: absolute; left: 64px; right: 64px; top: 290px; display: flex; justify-content: space-between; align-items: center; }
+  .logo-text b, .logo-text span { color: var(--white); }
+  .badge { padding: 16px 28px; background: var(--gold); color: var(--navy-ink); font-weight: 800; font-size: 20px; letter-spacing: .34em; text-transform: uppercase; }
+  .card { position: absolute; left: 64px; right: 64px; top: 930px; background: var(--white); color: var(--navy); padding: 48px 56px 44px; }
+  .card .label { color: var(--gold); }
+  .card h2 { font-weight: 600; font-size: 54px; letter-spacing: -.025em; margin-top: 14px; line-height: 1.1; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 36px; border-top: 1px solid var(--line); }
+  .stat { padding: 26px 0 0; }
+  .stat + .stat { border-left: 1px solid var(--line); padding-left: 28px; }
+  .stat b { display: block; font-weight: 600; font-size: 36px; }
+  .stat span { display: block; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+  .card .rule { margin: 30px 0 22px; }
+  .pricerow { display: flex; justify-content: space-between; align-items: baseline; }
+  .pricerow .label { color: var(--muted); }
+  .card .price { font-size: 64px; }
+  .cta { position: absolute; left: 0; right: 0; top: 1520px; text-align: center; }
+  .chev { width: 46px; height: 46px; stroke: var(--gold); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; display: block; margin: 0 auto 14px; }
+  .cta b { display: block; font-weight: 600; font-size: 30px; letter-spacing: .02em; }
+  .cta span { display: block; font-size: 22px; color: var(--gold-soft); margin-top: 8px; letter-spacing: .04em; }
+  .concept { left: 64px; top: 1652px; color: var(--white); }
+</style></head>
+<body><div class="frame">
+  <img class="photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85" alt="">
+  <div class="shade"></div>
+
+  <div class="top">
+    <div class="logo"><div class="logo-mark">ÇG</div><div class="logo-text"><b>Çayyolu</b><span>Gayrimenkul</span></div></div>
+    <span class="badge">Yeni ilan</span>
+  </div>
+
+  <div class="card">
+    <p class="label">Çayyolu · Çankaya / Ankara</p>
+    <h2>Site içi, havuzlu<br>3+1 daire</h2>
+    <div class="stats">
+      <div class="stat"><b>3+1</b><span>Oda</span></div>
+      <div class="stat"><b>145 m²</b><span>Brüt</span></div>
+      <div class="stat"><b>4. kat</b><span>Kat</span></div>
+    </div>
+    <div class="rule"></div>
+    <div class="pricerow"><span class="label">Satış fiyatı</span><span class="price">8.750.000<span class="cur">₺</span></span></div>
+  </div>
+
+  <div class="cta">
+    <svg class="chev" viewBox="0 0 24 24"><path d="M6 14l6-6 6 6M6 19l6-6 6 6"/></svg>
+    <b>Detaylar için yukarı kaydırın</b>
+    <span>ya da DM ile bize yazın</span>
+  </div>
+  <span class="concept">Konsept çalışma</span>
+</div></body></html>

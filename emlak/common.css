@@ -1,0 +1,46 @@
+/* Çayyolu Gayrimenkul — sosyal medya ortak stilleri */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --navy: #0f2a47;
+  --navy-2: #163659;
+  --navy-ink: #0a1e33;
+  --white: #ffffff;
+  --paper: #f7f5f0;      /* sıcak beyaz */
+  --gold: #c2a571;       /* ince altın/bej vurgu */
+  --gold-soft: #e6d9bf;
+  --muted: #6d7b8c;
+  --line: rgba(15, 42, 71, 0.12);
+  --font: "Manrope", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); color: var(--navy); -webkit-font-smoothing: antialiased; }
+.frame { position: relative; overflow: hidden; }
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: 18px; }
+.logo-mark {
+  width: 64px; height: 64px; border: 1.5px solid var(--gold); display: grid; place-items: center;
+  font-weight: 300; font-size: 26px; letter-spacing: .04em; color: var(--gold);
+}
+.logo-text { line-height: 1.15; }
+.logo-text b { display: block; font-weight: 700; font-size: 22px; letter-spacing: .26em; text-transform: uppercase; }
+.logo-text span { display: block; font-weight: 400; font-size: 14px; letter-spacing: .42em; text-transform: uppercase; opacity: .7; margin-top: 4px; }
+
+/* Etiketler */
+.label { font-weight: 600; font-size: 18px; letter-spacing: .32em; text-transform: uppercase; }
+.tag {
+  display: inline-block; padding: 14px 26px; font-weight: 700; font-size: 18px; letter-spacing: .34em;
+  text-transform: uppercase; background: var(--navy); color: var(--white); border-left: 4px solid var(--gold);
+}
+.rule { height: 1px; background: var(--gold); opacity: .7; }
+
+.price { font-weight: 300; letter-spacing: -.02em; }
+.price .cur { color: var(--gold); font-weight: 400; margin-left: 6px; }
+
+/* İkonlar */
+.ico { width: 34px; height: 34px; fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* Konsept notu */
+.concept { position: absolute; font-size: 13px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; opacity: .55; }

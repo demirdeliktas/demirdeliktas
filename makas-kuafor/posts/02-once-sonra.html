@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>02 Önce Sonra Boyama</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .post { background: var(--blush); }
+  .pane { position: absolute; top: 0; height: 930px; width: 540px; overflow: hidden; }
+  .pane img { width: 100%; height: 100%; object-fit: cover; }
+  .before { left: 0; }
+  .before img { filter: saturate(.7) brightness(.95); object-position: 50% 30%; }
+  .after { right: 0; }
+  .after img { object-position: 50% 25%; }
+  .divider { position: absolute; left: 538px; top: 0; width: 4px; height: 930px; background: var(--white); }
+  .knob { position: absolute; left: 480px; top: 405px; width: 120px; height: 120px; border-radius: 50%; background: var(--white); display: grid; place-items: center; color: var(--plum); box-shadow: 0 16px 40px -16px rgba(38,18,31,.6); }
+  .knob svg { width: 58px; height: 58px; }
+  .label { position: absolute; top: 48px; }
+  .before .label { left: 40px; }
+  .after .label { right: 40px; }
+  .band { position: absolute; left: 0; right: 0; bottom: 0; height: 420px; background: var(--plum); color: var(--white); padding: 52px 64px; }
+  h2 { font-size: 86px; }
+  h2 .it { color: var(--lime); font-size: 98px; }
+  .meta { display: flex; gap: 14px; margin-top: 26px; }
+  .meta .chip { font-size: 18px; padding: 10px 18px; }
+  .note { position: absolute; right: 64px; bottom: 46px; font-size: 18px; opacity: .6; }
+  .tag { position: absolute; left: 64px; bottom: 44px; }
+</style></head>
+<body><div class="post">
+  <div class="pane before"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85" alt=""><span class="label chip chip-plum">Önce</span></div>
+  <div class="pane after"><img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=900&q=85" alt=""><span class="label chip chip-lime">Sonra</span></div>
+  <div class="divider"></div>
+  <div class="knob"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="12" cy="37" r="7"/><circle cx="36" cy="37" r="7"/><path d="M16 31 37 5M32 31 11 5"/></svg></div>
+  <div class="band">
+    <h2 class="display">Koyu kumraldan<br><span class="it">bal köpüğü</span> sarıya</h2>
+    <div class="meta"><span class="chip chip-line">Balyaj</span><span class="chip chip-line">Tonlama</span><span class="chip chip-line">Keratin bakım</span></div>
+    <span class="handle tag">@makaskuafor.kizilay</span>
+    <span class="note">Temsili görsellerdir.</span>
+  </div>
+</div></body></html>

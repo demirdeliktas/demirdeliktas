@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>04 Saat Dilimleri</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .post { background: var(--plum); color: var(--white); }
+  .photo { height: 700px; object-position: 50% 30%; }
+  .photo-shade { position: absolute; left: 0; right: 0; top: 0; height: 700px; background: linear-gradient(180deg, rgba(38,18,31,.5), rgba(38,18,31,0) 30%, rgba(38,18,31,.25) 72%, var(--plum)); }
+  .top { position: absolute; top: 56px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; }
+  .copy { position: absolute; top: 560px; left: 64px; right: 64px; }
+  h2 { font-size: 104px; }
+  h2 .it { color: var(--lime); font-size: 118px; }
+  .slots { margin-top: 36px; display: grid; gap: 16px; }
+  .slot { display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 28px; padding: 24px 30px; border-radius: 26px; background: var(--plum-2); }
+  .slot.hot { background: var(--lime); color: var(--plum); }
+  .slot .time { font-family: var(--display); font-weight: 800; font-size: 44px; letter-spacing: -.03em; line-height: 1; }
+  .slot .time small { display: block; font-family: var(--body); font-size: 18px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; opacity: .7; margin-bottom: 8px; }
+  .slot p { font-size: 26px; line-height: 1.35; font-weight: 600; }
+  .slot p span { display: block; font-weight: 500; font-size: 21px; opacity: .75; }
+  .foot { color: var(--white); }
+</style></head>
+<body><div class="post">
+  <img class="photo" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1400&q=85" alt="">
+  <div class="photo-shade"></div>
+  <div class="top">
+    <div class="brand"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="12" cy="37" r="7"/><circle cx="36" cy="37" r="7"/><path d="M16 31 37 5M32 31 11 5"/></svg><div>makas<small>Kuaför · Kızılay</small></div></div>
+    <span class="chip chip-lime">Duyuru</span>
+  </div>
+  <div class="copy">
+    <h2 class="display">Sana uygun <span class="it">saati</span> seç</h2>
+    <div class="slots">
+      <div class="slot hot"><div class="time"><small>Sabah</small>09–12</div><p>Sakin saatler: hafta içi %15 indirim<span>Kalabalık yok, kahven bizden.</span></p></div>
+      <div class="slot"><div class="time"><small>Öğle</small>12–17</div><p>Ekspres fön, 30 dakikada hazır<span>Öğle arasında gel, işe dön.</span></p></div>
+      <div class="slot"><div class="time"><small>Akşam</small>17–21</div><p>İş çıkışı randevuları<span>Cuma ve cumartesi 22:00'ye kadar.</span></p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="handle">@makaskuafor.kizilay</span><span class="handle">Pazar 10:00–18:00</span></div>
+</div></body></html>

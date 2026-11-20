@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>01 Açılış Kampanyası</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .post { background: var(--plum); color: var(--white); }
+  .photo { height: 860px; filter: saturate(.85); }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,18,31,.55) 0%, rgba(38,18,31,0) 22%, rgba(38,18,31,0) 40%, var(--plum) 64%); }
+  .top { position: absolute; top: 56px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; }
+  .copy { position: absolute; left: 64px; right: 64px; top: 640px; }
+  h1 { font-size: 132px; }
+  h1 .it { color: var(--lime); font-size: 150px; }
+  .sub { margin-top: 30px; font-size: 30px; line-height: 1.4; max-width: 640px; opacity: .9; }
+  .sticker {
+    position: absolute; right: 64px; top: 470px; width: 290px; height: 290px; border-radius: 50%;
+    background: var(--lime); color: var(--plum); display: grid; place-content: center; text-align: center;
+    transform: rotate(-10deg); box-shadow: 0 24px 50px -20px rgba(0,0,0,.6);
+  }
+  .sticker b { font-family: var(--display); font-weight: 800; font-size: 108px; letter-spacing: -.05em; line-height: .9; }
+  .sticker span { font-weight: 700; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; line-height: 1.3; }
+  .foot { color: var(--white); }
+  .foot .cutline { flex: 1; margin: 0 28px; }
+</style></head>
+<body><div class="post">
+  <img class="photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=85" alt="">
+  <div class="shade"></div>
+  <div class="top">
+    <div class="brand"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="12" cy="37" r="7"/><circle cx="36" cy="37" r="7"/><path d="M16 31 37 5M32 31 11 5"/></svg><div>makas<small>Kuaför · Kızılay</small></div></div>
+    <span class="chip chip-line">Yeni açıldık</span>
+  </div>
+  <div class="sticker"><span>İlk ay tüm<br>hizmetlerde</span><b>%30</b><span>indirim</span></div>
+  <div class="copy">
+    <h1 class="display">Kızılay'da<br>yeni bir <span class="it">kesim</span><br>başlıyor.</h1>
+    <p class="sub">Kapılarımızı açtık! 1–31 Aralık arası kesim, boya ve bakımda açılışa özel fiyatlar.</p>
+  </div>
+  <div class="foot"><span class="handle">@makaskuafor.kizilay</span><hr class="cutline"><span class="handle">Randevu: DM</span></div>
+</div></body></html>

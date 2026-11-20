@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>03 Fiyat Listesi</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .post { background: var(--blush); padding: 64px; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; }
+  .thumb { width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 10px solid var(--white); flex: none; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  h2 { font-size: 128px; margin-top: 40px; }
+  h2 .it { font-size: 146px; display: block; margin-top: -6px; }
+  .groups { margin-top: 44px; display: grid; gap: 40px; }
+  .group h3 { display: inline-block; font-family: var(--body); font-weight: 700; font-size: 20px; letter-spacing: .2em; text-transform: uppercase; background: var(--plum); color: var(--white); padding: 8px 16px; border-radius: 999px; margin-bottom: 8px; }
+  .row { display: flex; align-items: baseline; gap: 16px; font-size: 34px; font-weight: 600; padding: 12px 0; }
+  .row .dots { flex: 1; border-bottom: 3px dotted rgba(38,18,31,.35); transform: translateY(-8px); }
+  .row b { font-family: var(--display); font-weight: 800; font-size: 38px; letter-spacing: -.02em; }
+  .row b small { font-family: var(--body); font-size: 22px; font-weight: 600; opacity: .6; letter-spacing: 0; margin-left: 2px; }
+  .fine { position: absolute; left: 64px; bottom: 60px; font-size: 20px; opacity: .7; max-width: 560px; line-height: 1.4; }
+  .foot { justify-content: flex-end; }
+</style></head>
+<body><div class="post">
+  <div class="head">
+    <div>
+      <div class="brand"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="12" cy="37" r="7"/><circle cx="36" cy="37" r="7"/><path d="M16 31 37 5M32 31 11 5"/></svg><div>makas<small>Kuaför · Kızılay</small></div></div>
+      <h2 class="display">Fiyat<span class="it">listesi</span></h2>
+    </div>
+    <div class="thumb"><img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?auto=format&fit=crop&w=700&q=85" alt=""></div>
+  </div>
+
+  <div class="groups">
+    <div class="group">
+      <h3>Kesim &amp; Şekillendirme</h3>
+      <div class="row">Kadın saç kesimi<span class="dots"></span><b>450₺</b></div>
+      <div class="row">Erkek saç kesimi<span class="dots"></span><b>300₺</b></div>
+      <div class="row">Fön<span class="dots"></span><b>250₺</b></div>
+    </div>
+    <div class="group">
+      <h3>Renk</h3>
+      <div class="row">Dip boya<span class="dots"></span><b>900₺<small>'den</small></b></div>
+      <div class="row">Balyaj / Ombre<span class="dots"></span><b>2.500₺<small>'den</small></b></div>
+    </div>
+    <div class="group">
+      <h3>Bakım</h3>
+      <div class="row">Keratin bakım<span class="dots"></span><b>1.800₺<small>'den</small></b></div>
+      <div class="row">Saç botoksu<span class="dots"></span><b>1.500₺<small>'den</small></b></div>
+    </div>
+  </div>
+
+  <p class="fine">Renk ve bakım fiyatları saç uzunluğu ve yoğunluğuna göre değişir.</p>
+  <div class="foot"><span class="handle">@makaskuafor.kizilay</span></div>
+</div></body></html>

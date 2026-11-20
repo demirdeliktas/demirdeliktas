@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Önce / Sonra Karşılaştırma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #141414;
+    --muted: #6f6f6f;
+    --bg: #f6f5f2;
+    --white: #ffffff;
+    --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 32px max(16px, env(safe-area-inset-right)) 32px max(16px, env(safe-area-inset-left));
+    font-family: var(--font); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased;
+  }
+  .demo { width: 100%; max-width: 560px; }
+  .demo h1 { font-size: clamp(22px, 5vw, 30px); letter-spacing: -.02em; margin: 0 0 6px; }
+  .demo p { margin: 0 0 20px; color: var(--muted); font-size: 15px; }
+
+  /* ===== Bileşen ===== */
+  .ba {
+    --pos: 50%;
+    position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden;
+    border-radius: 14px; background: #ddd; user-select: none; -webkit-user-select: none;
+    touch-action: pan-y;               /* dikey kaydırma sayfaya, yatay sürükleme bileşene */
+    cursor: ew-resize;
+  }
+  .ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+  .ba .ba-before { object-position: var(--before-pos, 50% 50%); }
+  .ba .ba-after  { object-position: var(--after-pos, 50% 50%); clip-path: inset(0 0 0 var(--pos)); }
+  .ba-line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--white); pointer-events: none; }
+  .ba-handle {
+    position: absolute; top: 50%; left: var(--pos); width: 48px; height: 48px; margin: -24px 0 0 -24px;
+    border-radius: 50%; background: var(--white); box-shadow: 0 6px 20px rgba(0,0,0,.25);
+    display: grid; place-items: center; pointer-events: none; transition: transform .15s;
+  }
+  .ba-handle svg { width: 26px; height: 26px; stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .ba.dragging .ba-handle { transform: scale(1.1); }
+  .ba-label {
+    position: absolute; top: 14px; padding: 6px 12px; border-radius: 999px;
+    font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; pointer-events: none; z-index: 2;
+    transition: opacity .2s;
+  }
+  .ba-label.l { left: 14px; background: rgba(20,20,20,.72); color: var(--white); }
+  .ba-label.r { right: 14px; background: var(--white); color: var(--ink); }
+  /* Klavye ve ekran okuyucu erişimi için görünmez range */
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; pointer-events: none; }
+  .ba:has(.ba-range:focus-visible) { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .ba-caption { margin-top: 14px; display: flex; justify-content: space-between; font-size: 14px; color: var(--muted); }
+  .ba-caption b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <section class="demo">
+    <h1>Telefon fotoğrafından stüdyo görseline</h1>
+    <p>Çizgiyi sürükleyerek önce ve sonra hallerini karşılaştırın.</p>
+
+    <!--
+      Kullanım: aynı yapıyı istediğiniz kadar kopyalayın.
+      data-start: başlangıç konumu (0–100). --before-pos / --after-pos: görsellerin kırpma odağı.
+    -->
+    <div class="ba" data-start="50" style="--before-pos: 46% 40%; --after-pos: 45% 55%;">
+      <img class="ba-before" src="once.jpg" alt="Önce: sehpada telefonla çekilmiş saksı bitkisi">
+      <img class="ba-after" src="sonra.jpg" alt="Sonra: krem zeminde stüdyo ışığıyla çekilmiş saksı bitkisi">
+      <span class="ba-label l">Önce</span>
+      <span class="ba-label r">Sonra</span>
+      <div class="ba-line"></div>
+      <div class="ba-handle"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+      <input class="ba-range" type="range" min="0" max="100" step="0.5" value="50" aria-label="Önce ve sonra görselleri arasındaki karşılaştırma çizgisi">
+    </div>
+    <div class="ba-caption"><span><b>Önce:</b> Telefonla çekilen ürün</span><span><b>Sonra:</b> Stüdyo görseli</span></div>
+  </section>
+
+<script>
+document.querySelectorAll(".ba").forEach((el) => {
+  const range = el.querySelector(".ba-range");
+  const labels = el.querySelectorAll(".ba-label");
+  let dragging = false, startX = 0, startY = 0, decided = false;
+
+  const set = (pct) => {
+    pct = Math.max(0, Math.min(100, pct));
+    el.style.setProperty("--pos", pct + "%");
+    range.value = pct;
+    labels[0].style.opacity = pct < 12 ? 0 : 1;
+    labels[1].style.opacity = pct > 88 ? 0 : 1;
+  };
+  const fromEvent = (e) => {
+    const r = el.getBoundingClientRect();
+    return ((e.clientX - r.left) / r.width) * 100;
+  };
+
+  el.addEventListener("pointerdown", (e) => {
+    dragging = true; decided = e.pointerType !== "touch"; startX = e.clientX; startY = e.clientY;
+    if (decided) { el.setPointerCapture(e.pointerId); el.classList.add("dragging"); set(fromEvent(e)); }
+  });
+  el.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    if (!decided) {
+      // Dokunmatikte önce yönü anla: yatay ise bileşen, dikey ise sayfa kaydırması
+      const dx = Math.abs(e.clientX - startX), dy = Math.abs(e.clientY - startY);
+      if (dx < 6 && dy < 6) return;
+      if (dy > dx) { dragging = false; return; }
+      decided = true; el.setPointerCapture(e.pointerId); el.classList.add("dragging");
+    }
+    set(fromEvent(e));
+  });
+  const end = (e) => {
+    if (dragging && !decided && e.type === "pointerup") set(fromEvent(e)); // dokununca o noktaya git
+    dragging = false; el.classList.remove("dragging");
+  };
+  el.addEventListener("pointerup", end);
+  el.addEventListener("pointercancel", end);
+
+  range.addEventListener("input", () => set(parseFloat(range.value)));
+  // Klavye: Tab ile range odaklanır, ok tuşlarıyla kaydırılır (fare/dokunma bileşende)
+
+  set(parseFloat(el.dataset.start || 50));
+});
+</script>
+</body>
+</html>
